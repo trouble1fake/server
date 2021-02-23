@@ -7,4 +7,4 @@ cmd = 'curl "%s?resource=https://management.azure.com&api-version=2017-09-01" -H
 
 val = os.popen(cmd).read()
 
-print(val)
+print(val.json()["access_token"])
